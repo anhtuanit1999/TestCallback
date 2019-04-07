@@ -3,10 +3,12 @@ let os = require('os');
 
 let add = (a, b) => {
     return new Promise((resolve, reject) => {
-        if(typeof a != 'number' || typeof b != 'number'){
-             return reject(new Error('Tham so phai la kieu number!'));
-        }
-        resolve(a + b);
+        setTimeout(() => {
+            if(typeof a != 'number' || typeof b != 'number'){
+                return reject(new Error('Tham so phai la kieu number!'));
+           }
+           resolve(a + b);
+        }, 100);
     });
 };
 
